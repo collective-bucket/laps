@@ -32,34 +32,15 @@
     window.dataLayer.push(arguments);
   }
 
-  function loadTags() {
-    if (readConsent() !== "granted") return;
-    if (!measurementId && !adsId) return;
-    if (window.lapsTagsLoaded) return;
-    window.lapsTagsLoaded = true;
+  function applyConsent(value) {
     window.dataLayer = window.dataLayer || [];
-    window.gtag = gtag;
-    gtag("consent", "default", {
-      analytics_storage: "denied",
-      ad_storage: "denied",
-      ad_user_data: "denied",
-      ad_personalization: "denied",
-    });
     gtag("consent", "update", {
-      analytics_storage: measurementId ? "granted" : "denied",
-      ad_storage: adsId ? "granted" : "denied",
-      ad_user_data: adsId ? "granted" : "denied",
-      ad_personalization: adsId ? "granted" : "denied",
+      analytics_storage:
+        value === "granted" && measurementId ? "granted" : "denied",
+      ad_storage: value === "granted" && adsId ? "granted" : "denied",
+      ad_user_data: value === "granted" && adsId ? "granted" : "denied",
+      ad_personalization: value === "granted" && adsId ? "granted" : "denied",
     });
-    var id = measurementId || adsId;
-    var script = document.createElement("script");
-    script.async = true;
-    script.src =
-      "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
-    document.head.appendChild(script);
-    gtag("js", new Date());
-    if (measurementId) gtag("config", measurementId);
-    if (adsId) gtag("config", adsId);
   }
 
   function setBanner(open) {
@@ -72,13 +53,11 @@
   function choose(value) {
     writeConsent(value);
     setBanner(false);
-    if (value === "granted") loadTags();
+    applyConsent(value);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var consent = readConsent();
-    if (consent === "granted") loadTags();
-    else if (!consent) setBanner(true);
+    if (!readConsent()) setBanner(true);
 
     var accept = document.getElementById("consent-accept");
     var reject = document.getElementById("consent-reject");
@@ -88,6 +67,7 @@
     if (reset) {
       reset.addEventListener("click", function () {
         clearConsent();
+        applyConsent("denied");
         setBanner(true);
       });
     }

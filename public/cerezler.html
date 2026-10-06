@@ -9,6 +9,30 @@
     <link rel="canonical" href="https://lapsfethiye.com/cerezler" />
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="stylesheet" href="/styles.css" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        wait_for_update: 500,
+      });
+      if (document.cookie.match(/(?:^|; )laps_consent=granted/)) {
+        gtag("consent", "update", { analytics_storage: "granted" });
+      }
+    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-13VJYX1E77"
+    ></script>
+    <script>
+      gtag("js", new Date());
+      gtag("config", "G-13VJYX1E77");
+    </script>
   </head>
   <body class="doc">
     <main>
@@ -36,7 +60,9 @@
         Google’a aktarılır ve yurt dışında işlenebilir.
       </p>
       <p>
-        Reddetmeniz bu çerezleri yazdırmaz. Ölçüm kodu da yüklenmez.
+        Google etiketi sayfada durur ki kurulum doğrulanabilsin. Reddetmeniz
+        analitik ve reklam çerezini yazdırmaz. Kimlikli ölçüm, kabulden sonra
+        başlar.
       </p>
       <p>
         <button type="button" class="consent-reset" id="consent-reset">

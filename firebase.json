@@ -9,7 +9,22 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "rewrites": [
+      {
+        "source": "/googlecf4e5ae45443d895.html",
+        "destination": "/googlecf4e5ae45443d895"
+      }
+    ],
     "headers": [
+      {
+        "source": "/googlecf4e5ae45443d895.html",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "text/html; charset=utf-8"
+          }
+        ]
+      },
       {
         "source": "**/*.@(png|svg|jpg|jpeg|webp|ico)",
         "headers": [

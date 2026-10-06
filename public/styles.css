@@ -25,6 +25,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.home {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   min-height: 100dvh;
   display: flex;
@@ -33,6 +39,11 @@ main {
   justify-content: center;
   padding: 12vh 8vw 16vh;
   text-align: center;
+}
+
+body.home main {
+  flex: 1;
+  min-height: 0;
 }
 
 h1 {
@@ -61,6 +72,146 @@ h1 img {
   color: var(--muted);
 }
 
+.site-footer {
+  width: min(36rem, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 0 0 2rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+.site-footer nav {
+  margin-top: 0.7rem;
+}
+
+.site-footer nav a {
+  margin: 0 0.4rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.doc main {
+  display: block;
+  max-width: 40rem;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 3.25rem 1.5rem 1.5rem;
+  text-align: left;
+}
+
+.mark {
+  display: block;
+  width: min(168px, 46vw);
+  margin: 0 0 2.25rem;
+}
+
+.mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.doc h1 {
+  width: auto;
+  margin: 0 0 1.25rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.doc h2 {
+  margin: 1.8rem 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.doc p,
+.doc li {
+  margin: 0.45rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.doc ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.doc code {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.92em;
+}
+
+.kune {
+  margin: 0.75rem 0 0;
+  padding: 0;
+}
+
+.kune div {
+  margin-top: 0.2rem;
+}
+
+.kune a {
+  color: inherit;
+}
+
+body.consent-open {
+  padding-bottom: 7.5rem;
+}
+
+.consent {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  border-top: 1px solid #e4e4e4;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.consent[hidden] {
+  display: none;
+}
+
+.consent p {
+  margin: 0;
+  max-width: 34rem;
+}
+
+.consent a {
+  color: inherit;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.consent button,
+.consent-reset {
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+}
+
 @media (max-width: 480px) {
   main {
     padding: 10vh 8vw 14vh;
@@ -68,5 +219,9 @@ h1 img {
 
   .soon {
     margin-top: 2.25rem;
+  }
+
+  .doc main {
+    padding-top: 2.25rem;
   }
 }

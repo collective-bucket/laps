@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
+  <body class="home">
     <main>
       <h1>
         <img
@@ -34,5 +34,27 @@
       <p class="soon">Yakında</p>
       <p class="where">Fethiye</p>
     </main>
+    <footer class="site-footer">
+      <p>
+        Yusuf Çelik · Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A,
+        Fethiye / Muğla
+      </p>
+      <nav>
+        <a href="/aydinlatma">Aydınlatma</a>
+        <a href="/cerezler">Çerezler</a>
+        <a href="/kullanim-sartlari">Kullanım şartları</a>
+      </nav>
+    </footer>
+    <div id="consent" class="consent" hidden>
+      <p>
+        Ziyareti ölçmek için çerez kullanabiliriz.
+        <a href="/cerezler">Çerezler</a>
+      </p>
+      <div class="consent-actions">
+        <button type="button" id="consent-reject">Reddet</button>
+        <button type="button" id="consent-accept">Kabul et</button>
+      </div>
+    </div>
+    <script src="/assets/track.js" defer></script>
   </body>
 </html>

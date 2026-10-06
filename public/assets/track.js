@@ -1,5 +1,5 @@
 (function () {
-  var measurementId = "";
+  var measurementId = "G-13VJYX1E77";
   var adsId = "";
   var cookieName = "laps_consent";
   var maxAge = 60 * 60 * 24 * 180;

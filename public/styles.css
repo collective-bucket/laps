@@ -146,6 +146,15 @@ body.home .phone a {
   text-underline-offset: 0.18em;
 }
 
+.site-footer .credit {
+  margin: 0.85rem 0 0;
+}
+
+.site-footer .credit a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .doc main {
   display: block;
   max-width: 40rem;

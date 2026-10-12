@@ -137,6 +137,11 @@ body.home .phone a {
   text-align: center;
 }
 
+body.menu .site-footer,
+body.doc .site-footer {
+  width: min(40rem, calc(100% - 2rem));
+}
+
 .site-footer a {
   color: inherit;
 }
@@ -233,6 +238,12 @@ body.home .phone a {
 
 .kune a {
   color: inherit;
+}
+
+.doc .ask a {
+  color: var(--green);
+  font-weight: 500;
+  text-decoration: none;
 }
 
 body.menu {
@@ -506,14 +517,31 @@ body.consent-open {
   gap: 0.5rem;
 }
 
-.consent button,
-.consent-reset {
+.consent button {
   font: inherit;
   color: var(--ink);
   background: var(--paper);
   border: 1px solid var(--ink);
   padding: 0.45rem 0.85rem;
   cursor: pointer;
+}
+
+.consent-reset {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--cream);
+  background: var(--green);
+  border: 0;
+  padding: 0.55rem 0.95rem;
+  cursor: pointer;
+}
+
+.consent-reset:hover,
+.consent-reset:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
 }
 
 @media (max-width: 480px) {

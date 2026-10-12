@@ -39,8 +39,7 @@ Fiyat, çalışma saati ve e-posta uydurulmaz. Basılı menüdeki yazımlar koru
 `jalapone`, `chedar`, `sweetchilly`, `Görali`, `Patsos`, `Chessburger`. Tavuk
 burger notu hindistan cevizi içerdiğini söyler.
 
-“Yusuf Çelik” ana sayfa ve menü alt bilgisinde yoktur; aydınlatma ve kullanım
-şartlarındaki künyede durur. İşyeri adresi ve telefon sitede yazılı olanlardır.
+İşyeri adresi ve telefon sitede yazılı olanlardır.
 Resmi Instagram hesabı `https://www.instagram.com/lapsfethiye`.
 
 ## Yerel

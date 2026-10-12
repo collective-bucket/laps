@@ -111,7 +111,7 @@
       "privacy.contact":
         "You can apply using the phone number above. A reply is given within thirty days.",
       "cookies.lead":
-        "LAPS! is operated by Yusuf Çelik at Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla. Last updated: 6 October 2026.",
+        "LAPS! is operated at Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla. Last updated: 6 October 2026.",
       "cookies.pref": "Preference cookies",
       "cookies.pref1":
         "laps_consent stores your choice for six months. It holds only accept or reject. It does not measure anything. Without it, the banner asks again on every visit. laps_lang stores the language you choose for six months. It does not measure anything either.",
@@ -239,7 +239,7 @@
       "privacy.contact":
         "Заявление можно подать по телефону выше. Ответ даётся не позднее тридцати дней.",
       "cookies.lead":
-        "LAPS! ведёт Юсуф Челик по адресу Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla. Обновлено: 6 октября 2026.",
+        "LAPS! работает по адресу Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla. Обновлено: 6 октября 2026.",
       "cookies.pref": "Файлы предпочтений",
       "cookies.pref1":
         "laps_consent хранит ваш выбор шесть месяцев. В нём только принятие или отказ. Он ничего не измеряет. Без него баннер спрашивает при каждом визите. laps_lang шесть месяцев хранит выбранный язык. Он тоже ничего не измеряет.",

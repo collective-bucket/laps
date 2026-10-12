@@ -130,11 +130,17 @@ body.home .phone a {
 .site-footer {
   width: min(36rem, calc(100% - 48px));
   margin: 0 auto;
-  padding: 0 0 2rem;
+  padding: 1rem 0 2rem;
   color: var(--muted);
   font-size: 0.78rem;
   line-height: 1.55;
   text-align: center;
+}
+
+body .site-footer p {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 body.menu .site-footer,

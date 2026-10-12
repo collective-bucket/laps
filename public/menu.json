@@ -62,7 +62,7 @@
     {
       "id": "gurme-tost",
       "name": "Gurme tost",
-      "icon": "wrap",
+      "icon": "toast",
       "products": [
         { "name": "Sucuk füme et chedar kaşar domates" },
         { "name": "3 peynirli pestolu" },
@@ -73,7 +73,7 @@
     {
       "id": "wings",
       "name": "Wings (kanat)",
-      "icon": "food",
+      "icon": "wing",
       "products": [
         { "name": "Buffalo (acı)" },
         { "name": "Ballı hardal" },
@@ -85,7 +85,7 @@
     {
       "id": "tatlilar",
       "name": "Tatlılar",
-      "icon": "special",
+      "icon": "dessert",
       "products": [{ "name": "Magnolia" }, { "name": "Cake" }]
     },
     {

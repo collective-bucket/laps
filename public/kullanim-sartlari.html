@@ -34,15 +34,23 @@
       gtag("config", "G-13VJYX1E77");
     </script>
   </head>
-  <body class="doc">
+  <body class="doc" data-i18n-title="title.terms">
+    <header class="lang-bar">
+      <nav class="lang" aria-label="Dil">
+        <button type="button" data-lang="tr" aria-current="true">TR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+      </nav>
+    </header>
     <main>
       <a class="mark" href="/">
         <img src="/assets/logo.png" alt="LAPS!" width="2000" height="957" />
       </a>
-      <h1>Kullanım şartları</h1>
-      <p>Son güncelleme: 6 Ekim 2026.</p>
+      <h1 data-i18n="terms.h1">Kullanım şartları</h1>
+      <p class="binding" data-i18n="legal.binding" hidden></p>
+      <p data-i18n="terms.updated">Son güncelleme: 6 Ekim 2026.</p>
 
-      <h2>İşletme</h2>
+      <h2 data-i18n="terms.biz">İşletme</h2>
       <div class="kune">
         <div>Yusuf Çelik — LAPS!</div>
         <div>
@@ -54,49 +62,54 @@
           <a href="tel:+905421684326">0542 168 43 26</a>
         </div>
       </div>
-      <p>
+      <p data-i18n="terms.activity">
         İşyeri 1 Ekim 2026’da açılmıştır. Faaliyet, oturacak yeri olan
         fast-food satışıdır; büfe bu kapsamdadır.
       </p>
 
-      <h2>Site</h2>
-      <p>
+      <h2 data-i18n="terms.site">Site</h2>
+      <p data-i18n="terms.site1">
         lapsfethiye.com tanıtım amaçlıdır. LAPS! işareti işletmeye aittir.
         İşaret, metin ve görseller izinsiz kullanılamaz. Menü ve saatler
         yayımlanıncaya kadar sitedeki bilgiler duyuru niteliğindedir.
       </p>
 
-      <h2>Sorumluluk</h2>
-      <p>
+      <h2 data-i18n="terms.liability">Sorumluluk</h2>
+      <p data-i18n="terms.liability1">
         Site olduğu gibi sunulur. Kesinti veya eksik bilgiden doğan dolaylı
         zararlardan işletme sorumlu tutulamaz. Sipariş ve ödeme bu sitede
         yapılmaz.
       </p>
 
-      <h2>Uygulanacak hukuk</h2>
-      <p>
+      <h2 data-i18n="terms.law">Uygulanacak hukuk</h2>
+      <p data-i18n="terms.law1">
         Uyuşmazlıklarda Türk hukuku uygulanır. Yetkili merciler, Fethiye ve
         Muğla’daki görevli yerlerdir.
       </p>
     </main>
     <footer class="site-footer">
       <nav>
-        <a href="/menu">Menü</a>
-        <a href="/aydinlatma">Aydınlatma</a>
-        <a href="/cerezler">Çerezler</a>
-        <a href="/kullanim-sartlari">Kullanım şartları</a>
+        <a href="/menu" data-i18n="nav.menu">Menü</a>
+        <a href="/aydinlatma" data-i18n="nav.privacy">Aydınlatma</a>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
+        <a href="/kullanim-sartlari" data-i18n="nav.terms">Kullanım şartları</a>
       </nav>
     </footer>
     <div id="consent" class="consent" hidden>
       <p>
-        Ziyareti ölçmek için çerez kullanabiliriz.
-        <a href="/cerezler">Çerezler</a>
+        <span data-i18n="consent.text">Ziyareti ölçmek için çerez kullanabiliriz.</span>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
       </p>
       <div class="consent-actions">
-        <button type="button" id="consent-reject">Reddet</button>
-        <button type="button" id="consent-accept">Kabul et</button>
+        <button type="button" id="consent-reject" data-i18n="consent.reject">
+          Reddet
+        </button>
+        <button type="button" id="consent-accept" data-i18n="consent.accept">
+          Kabul et
+        </button>
       </div>
     </div>
+    <script src="/assets/i18n.js" defer></script>
     <script src="/assets/track.js" defer></script>
   </body>
 </html>

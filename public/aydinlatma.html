@@ -34,19 +34,27 @@
       gtag("config", "G-13VJYX1E77");
     </script>
   </head>
-  <body class="doc">
+  <body class="doc" data-i18n-title="title.privacy">
+    <header class="lang-bar">
+      <nav class="lang" aria-label="Dil">
+        <button type="button" data-lang="tr" aria-current="true">TR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+      </nav>
+    </header>
     <main>
       <a class="mark" href="/">
         <img src="/assets/logo.png" alt="LAPS!" width="2000" height="957" />
       </a>
-      <h1>Aydınlatma metni</h1>
-      <p>
+      <h1 data-i18n="privacy.h1">Aydınlatma metni</h1>
+      <p class="binding" data-i18n="legal.binding" hidden></p>
+      <p data-i18n="privacy.lead">
         6698 sayılı Kişisel Verilerin Korunması Kanunu’nun 10. maddesi uyarınca,
         lapsfethiye.com ziyaretçilerine yönelik açıklamadır. Son güncelleme: 6
         Ekim 2026.
       </p>
 
-      <h2>Veri sorumlusu</h2>
+      <h2 data-i18n="privacy.controller">Veri sorumlusu</h2>
       <div class="kune">
         <div>Yusuf Çelik — LAPS!</div>
         <div>
@@ -58,18 +66,18 @@
           <a href="tel:+905421684326">0542 168 43 26</a>
         </div>
       </div>
-      <p>
+      <p data-i18n="privacy.activity">
         İşyeri, 1 Ekim 2026 tarihinde faaliyete başlamıştır. Ana faaliyet,
         oturacak yeri olan fast-food satış yeridir (büfe).
       </p>
 
-      <h2>İşlenen veriler ve amaç</h2>
-      <p>
+      <h2 data-i18n="privacy.data">İşlenen veriler ve amaç</h2>
+      <p data-i18n="privacy.data1">
         Siteyi açtığınızda barındırma hizmeti, güvenlik ve işleyiş için bağlantı
         kaydı tutar: IP adresi, tarayıcı bilgisi, istenen sayfa ve zaman.
         Hukuki sebep, meşru menfaattir.
       </p>
-      <p>
+      <p data-i18n="privacy.data2">
         Google etiketi her sayfada yüklüdür; çerezler kapalı başlar. Kabul
         ederseniz Google Analytics ve, reklam hesabı bağlandığında, Google Ads
         ziyareti ölçer. Bu ölçümde çerez kimliği, görüntülenen sayfa ve yaklaşık
@@ -77,48 +85,59 @@
         yazdırmaz. Hesap, form veya ödeme yoktur.
       </p>
 
-      <h2>Aktarım</h2>
-      <p>
+      <h2 data-i18n="privacy.transfer">Aktarım</h2>
+      <p data-i18n="privacy.transfer1">
         Kayıtlar Firebase Hosting altyapısında işlenir. Kabul edilen ölçüm
         Google Analytics ve Google Ads’e gider. Her ikisi de Google tarafından
         sağlanır ve yurt dışında işleme ihtimali vardır. Veriler satılmaz.
       </p>
 
-      <h2>Haklarınız</h2>
-      <p>Kanunun 11. maddesi kapsamında:</p>
+      <h2 data-i18n="privacy.rights">Haklarınız</h2>
+      <p data-i18n="privacy.rightsLead">Kanunun 11. maddesi kapsamında:</p>
       <ul>
-        <li>verinin işlenip işlenmediğini öğrenme,</li>
-        <li>işlenmişse buna ilişkin bilgi isteme,</li>
-        <li>amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
-        <li>eksik veya yanlışsa düzeltilmesini isteme,</li>
-        <li>silinmesini veya yok edilmesini isteme,</li>
-        <li>aktarıldığı kişilere bildirilmesini isteme,</li>
-        <li>otomatik analize itiraz etme,</li>
-        <li>zararın giderilmesini talep etme.</li>
+        <li data-i18n="privacy.r1">verinin işlenip işlenmediğini öğrenme,</li>
+        <li data-i18n="privacy.r2">işlenmişse buna ilişkin bilgi isteme,</li>
+        <li data-i18n="privacy.r3">
+          amacına uygun kullanılıp kullanılmadığını öğrenme,
+        </li>
+        <li data-i18n="privacy.r4">
+          eksik veya yanlışsa düzeltilmesini isteme,
+        </li>
+        <li data-i18n="privacy.r5">silinmesini veya yok edilmesini isteme,</li>
+        <li data-i18n="privacy.r6">
+          aktarıldığı kişilere bildirilmesini isteme,
+        </li>
+        <li data-i18n="privacy.r7">otomatik analize itiraz etme,</li>
+        <li data-i18n="privacy.r8">zararın giderilmesini talep etme.</li>
       </ul>
-      <p>
+      <p data-i18n="privacy.contact">
         Başvurularınızı yukarıdaki telefon numarasından iletebilirsiniz. Yanıt
         en geç otuz gün içinde verilir.
       </p>
     </main>
     <footer class="site-footer">
       <nav>
-        <a href="/menu">Menü</a>
-        <a href="/aydinlatma">Aydınlatma</a>
-        <a href="/cerezler">Çerezler</a>
-        <a href="/kullanim-sartlari">Kullanım şartları</a>
+        <a href="/menu" data-i18n="nav.menu">Menü</a>
+        <a href="/aydinlatma" data-i18n="nav.privacy">Aydınlatma</a>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
+        <a href="/kullanim-sartlari" data-i18n="nav.terms">Kullanım şartları</a>
       </nav>
     </footer>
     <div id="consent" class="consent" hidden>
       <p>
-        Ziyareti ölçmek için çerez kullanabiliriz.
-        <a href="/cerezler">Çerezler</a>
+        <span data-i18n="consent.text">Ziyareti ölçmek için çerez kullanabiliriz.</span>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
       </p>
       <div class="consent-actions">
-        <button type="button" id="consent-reject">Reddet</button>
-        <button type="button" id="consent-accept">Kabul et</button>
+        <button type="button" id="consent-reject" data-i18n="consent.reject">
+          Reddet
+        </button>
+        <button type="button" id="consent-accept" data-i18n="consent.accept">
+          Kabul et
+        </button>
       </div>
     </div>
+    <script src="/assets/i18n.js" defer></script>
     <script src="/assets/track.js" defer></script>
   </body>
 </html>

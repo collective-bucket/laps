@@ -60,7 +60,7 @@ body.home main {
   min-height: 0;
   max-width: 36rem;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 1.5rem;
+  padding: 2.75rem 1.5rem 1.5rem;
   text-align: center;
 }
 
@@ -151,7 +151,7 @@ body.home .phone a {
   max-width: 40rem;
   min-height: 0;
   margin: 0 auto;
-  padding: 3.25rem 1.5rem 1.5rem;
+  padding: 1.35rem 1.5rem 1.5rem;
   text-align: left;
 }
 
@@ -221,7 +221,7 @@ body.menu {
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
-  padding: 1.75rem 1rem 0.35rem;
+  padding: 0.75rem 1rem 0.35rem;
   text-align: center;
 }
 
@@ -499,10 +499,51 @@ body.consent-open {
   }
 
   .doc main {
-    padding-top: 2.25rem;
+    padding-top: 1.15rem;
   }
 
   body.home main {
-    padding-top: 2.5rem;
+    padding-top: 1.6rem;
   }
+}
+
+.lang-bar {
+  display: flex;
+  justify-content: flex-end;
+  width: min(36rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 0.85rem 0 0;
+}
+
+body.menu .lang-bar,
+body.doc .lang-bar {
+  width: min(40rem, calc(100% - 2rem));
+}
+
+.lang {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.lang button {
+  margin: 0;
+  padding: 0.2rem 0.4rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.lang button[aria-current="true"] {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.binding {
+  color: var(--muted);
+  font-size: 0.9rem;
 }

@@ -50,7 +50,14 @@
       gtag("config", "G-13VJYX1E77");
     </script>
   </head>
-  <body class="home">
+  <body class="home" data-i18n-title="title.home">
+    <header class="lang-bar">
+      <nav class="lang" aria-label="Dil">
+        <button type="button" data-lang="tr" aria-current="true">TR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+      </nav>
+    </header>
     <main>
       <h1>
         <img
@@ -61,7 +68,7 @@
         />
       </h1>
       <p class="tagline">Burger · Sandwich · Coffee</p>
-      <a class="cta" href="/menu">Menüyü gör</a>
+      <a class="cta" href="/menu" data-i18n="home.cta">Menüyü gör</a>
       <p class="where">
         Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A<br />
         Fethiye / Muğla
@@ -73,6 +80,7 @@
         <img
           src="/assets/storefront.jpg"
           alt="LAPS! büfesinin dışarıdan görünümü, Fethiye"
+          data-i18n-alt="home.photo"
           width="1024"
           height="959"
         />
@@ -83,22 +91,27 @@
         Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla
       </p>
       <nav>
-        <a href="/menu">Menü</a>
-        <a href="/aydinlatma">Aydınlatma</a>
-        <a href="/cerezler">Çerezler</a>
-        <a href="/kullanim-sartlari">Kullanım şartları</a>
+        <a href="/menu" data-i18n="nav.menu">Menü</a>
+        <a href="/aydinlatma" data-i18n="nav.privacy">Aydınlatma</a>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
+        <a href="/kullanim-sartlari" data-i18n="nav.terms">Kullanım şartları</a>
       </nav>
     </footer>
     <div id="consent" class="consent" hidden>
       <p>
-        Ziyareti ölçmek için çerez kullanabiliriz.
-        <a href="/cerezler">Çerezler</a>
+        <span data-i18n="consent.text">Ziyareti ölçmek için çerez kullanabiliriz.</span>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
       </p>
       <div class="consent-actions">
-        <button type="button" id="consent-reject">Reddet</button>
-        <button type="button" id="consent-accept">Kabul et</button>
+        <button type="button" id="consent-reject" data-i18n="consent.reject">
+          Reddet
+        </button>
+        <button type="button" id="consent-accept" data-i18n="consent.accept">
+          Kabul et
+        </button>
       </div>
     </div>
+    <script src="/assets/i18n.js" defer></script>
     <script src="/assets/track.js" defer></script>
   </body>
 </html>

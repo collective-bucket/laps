@@ -25,6 +25,11 @@
     return ICONS[name] || ICONS.burger;
   }
 
+  function tr(key, fallback) {
+    if (!window.LapsI18n) return fallback;
+    return LapsI18n.t(key, fallback);
+  }
+
   function formatPrice(price, currency) {
     if (price === undefined || price === null || price === "") return "";
     var value = Number(price).toFixed(2).replace(/\.00$/, "");
@@ -78,19 +83,19 @@
     infoEl.className = "item-info";
 
     var nameEl = document.createElement("h3");
-    nameEl.textContent = item.name;
+    nameEl.textContent = tr("item." + item.name, item.name);
     infoEl.appendChild(nameEl);
 
     if (item.description) {
       var descEl = document.createElement("p");
-      descEl.textContent = item.description;
+      descEl.textContent = tr("desc." + item.name, item.description);
       infoEl.appendChild(descEl);
     }
 
     if (item.note) {
       var noteEl = document.createElement("p");
       noteEl.className = "note";
-      noteEl.textContent = item.note;
+      noteEl.textContent = tr("note." + item.name, item.note);
       infoEl.appendChild(noteEl);
     }
 
@@ -112,7 +117,9 @@
       return node.children.length + " kategori";
     }
     if (node.products && node.products.length) {
-      return node.products.length + " ürün";
+      return window.LapsI18n
+        ? LapsI18n.count(node.products.length)
+        : node.products.length + " ürün";
     }
     return "";
   }
@@ -132,7 +139,7 @@
 
     var label = document.createElement("span");
     label.className = "menu-card-label";
-    label.textContent = node.name;
+    label.textContent = tr("cat." + node.id, node.name);
     copy.appendChild(label);
 
     var metaText = cardMeta(node);
@@ -185,9 +192,12 @@
     var back = document.createElement("button");
     back.type = "button";
     back.className = "step-back";
-    back.setAttribute("aria-label", "Geri");
+    var backLabel = tr("menu.back", "Geri");
+    back.setAttribute("aria-label", backLabel);
     back.innerHTML =
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg><span>Geri</span>';
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg><span></span>';
+    back.querySelector("span").textContent = backLabel;
+    navEl.setAttribute("aria-label", tr("menu.nav", "Menü gezintisi"));
     back.addEventListener("click", function () {
       setHash(state.path.slice(0, -1));
     });
@@ -195,7 +205,10 @@
 
     var title = document.createElement("h2");
     title.className = "step-title";
-    title.textContent = trail[trail.length - 1].name || "";
+    var current = trail[trail.length - 1];
+    title.textContent = current.id
+      ? tr("cat." + current.id, current.name)
+      : current.name || "";
     inner.appendChild(title);
 
     navEl.appendChild(inner);
@@ -210,7 +223,7 @@
       .filter(Boolean);
   }
 
-  function render() {
+  function render(scroll) {
     var currency = (state.data.business && state.data.business.currency) || "₺";
     var resolved = findNode(state.path);
     var node = resolved.node;
@@ -236,10 +249,13 @@
     } else if (node.products && node.products.length) {
       contentEl.appendChild(renderProducts(node, currency));
     } else {
-      contentEl.innerHTML = '<p class="empty">Bu bölümde henüz ürün yok.</p>';
+      var empty = document.createElement("p");
+      empty.className = "empty";
+      empty.textContent = tr("menu.empty", "Bu bölümde henüz ürün yok.");
+      contentEl.appendChild(empty);
     }
 
-    window.scrollTo(0, 0);
+    if (scroll !== false) window.scrollTo(0, 0);
   }
 
   function applyPathFromLocation() {
@@ -265,7 +281,20 @@
     })
     .catch(function (err) {
       console.error(err);
-      document.getElementById("menu-content").innerHTML =
-        '<p class="error">Menü yüklenemedi. Lütfen daha sonra tekrar deneyin.</p>';
+      var failed = document.createElement("p");
+      failed.className = "error";
+      failed.textContent = tr(
+        "menu.error",
+        "Menü yüklenemedi. Lütfen daha sonra tekrar deneyin."
+      );
+      var slot = document.getElementById("menu-content");
+      slot.innerHTML = "";
+      slot.appendChild(failed);
     });
+
+  if (window.LapsI18n) {
+    LapsI18n.onChange(function () {
+      if (state.data) render(false);
+    });
+  }
 })();

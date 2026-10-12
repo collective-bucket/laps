@@ -47,7 +47,14 @@
       gtag("config", "G-13VJYX1E77");
     </script>
   </head>
-  <body class="menu">
+  <body class="menu" data-i18n-title="title.menu">
+    <header class="lang-bar">
+      <nav class="lang" aria-label="Dil">
+        <button type="button" data-lang="tr" aria-current="true">TR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="ru">RU</button>
+      </nav>
+    </header>
     <header class="menu-head">
       <a class="mark" href="/">
         <img src="/assets/logo.png" alt="LAPS!" width="2000" height="957" />
@@ -56,29 +63,34 @@
     </header>
     <nav id="step-nav" class="step-nav" aria-label="Menü gezintisi" hidden></nav>
     <main id="menu-content">
-      <p class="loading">Menü yükleniyor...</p>
+      <p class="loading" data-i18n="menu.loading">Menü yükleniyor...</p>
     </main>
     <footer class="site-footer">
       <p>
         Pazaryeri Mahallesi, Süleyman Demirel Bulvarı No: 196 A, Fethiye / Muğla
       </p>
       <nav>
-        <a href="/menu">Menü</a>
-        <a href="/aydinlatma">Aydınlatma</a>
-        <a href="/cerezler">Çerezler</a>
-        <a href="/kullanim-sartlari">Kullanım şartları</a>
+        <a href="/menu" data-i18n="nav.menu">Menü</a>
+        <a href="/aydinlatma" data-i18n="nav.privacy">Aydınlatma</a>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
+        <a href="/kullanim-sartlari" data-i18n="nav.terms">Kullanım şartları</a>
       </nav>
     </footer>
     <div id="consent" class="consent" hidden>
       <p>
-        Ziyareti ölçmek için çerez kullanabiliriz.
-        <a href="/cerezler">Çerezler</a>
+        <span data-i18n="consent.text">Ziyareti ölçmek için çerez kullanabiliriz.</span>
+        <a href="/cerezler" data-i18n="nav.cookies">Çerezler</a>
       </p>
       <div class="consent-actions">
-        <button type="button" id="consent-reject">Reddet</button>
-        <button type="button" id="consent-accept">Kabul et</button>
+        <button type="button" id="consent-reject" data-i18n="consent.reject">
+          Reddet
+        </button>
+        <button type="button" id="consent-accept" data-i18n="consent.accept">
+          Kabul et
+        </button>
       </div>
     </div>
+    <script src="/assets/i18n.js" defer></script>
     <script src="/assets/track.js" defer></script>
     <script src="/assets/menu.js" defer></script>
   </body>

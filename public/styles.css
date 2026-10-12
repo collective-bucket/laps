@@ -550,6 +550,11 @@ body.consent-open {
   outline-offset: 3px;
 }
 
+.doc p:has(.consent-reset) {
+  margin-top: calc(0.98rem * 1.6 * 2);
+  margin-bottom: calc(0.98rem * 1.6 * 2);
+}
+
 @media (max-width: 480px) {
   main {
     padding: 10vh 8vw 14vh;

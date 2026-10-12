@@ -98,6 +98,12 @@ body.home .where {
   color: var(--muted);
 }
 
+body.home .where a {
+  color: var(--green);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 body.home .phone {
   margin: 0.4rem 0 0;
   font-size: 0.95rem;

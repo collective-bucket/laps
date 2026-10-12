@@ -1,0 +1,105 @@
+{
+  "business": {
+    "name": "LAPS!",
+    "tagline": "Burger · Sandwich · Coffee",
+    "currency": "₺"
+  },
+  "menu": [
+    {
+      "id": "burgerler",
+      "name": "Burgerler",
+      "icon": "burger",
+      "products": [
+        {
+          "name": "Laps Burger",
+          "description": "İki adet kaburga burger, karamelize soğan, turşu, marul ve cheddar sos."
+        },
+        {
+          "name": "Teksas Burger",
+          "description": "Füme et, hamburger köftesi, domates, turşu, jalapone, marul."
+        },
+        {
+          "name": "Klasik Burger",
+          "description": "Köfte, mor soğan, turşu, domates."
+        },
+        {
+          "name": "Chessburger",
+          "description": "Köfte, turşu, domates, karamelize soğan."
+        },
+        {
+          "name": "Tavuk Burger",
+          "description": "Özel paneli tavuk but, Laps sos, marul, turşu.",
+          "note": "Hindistan cevizi içerir"
+        },
+        {
+          "name": "Öğrenci Burger",
+          "description": "Köfte, domates, marul, sos, crispy patates."
+        }
+      ]
+    },
+    {
+      "id": "sandvicler",
+      "name": "Sandviçler",
+      "icon": "sandwich",
+      "products": [
+        {
+          "name": "İkili tavuklu bun",
+          "description": "Laps ballı hardal, marul, turşu, laps sos."
+        },
+        {
+          "name": "İkili acılı taco bun",
+          "description": "%100 yağsız kıyma, jalapone, Meksika fasulyesi, laps hot sos, ranch, crispy, biber patates."
+        },
+        {
+          "name": "İkili fesleğenli sweetchilly bun",
+          "description": "Fesleğenli bun ekmeği, marul, laps sos."
+        },
+        { "name": "Sosisli" },
+        { "name": "Görali" },
+        { "name": "Patsos" }
+      ]
+    },
+    {
+      "id": "gurme-tost",
+      "name": "Gurme tost",
+      "icon": "wrap",
+      "products": [
+        { "name": "Sucuk füme et chedar kaşar domates" },
+        { "name": "3 peynirli pestolu" },
+        { "name": "Karışık tost (kaşar domates sucuk)" },
+        { "name": "Kaşarlı tost" }
+      ]
+    },
+    {
+      "id": "wings",
+      "name": "Wings (kanat)",
+      "icon": "food",
+      "products": [
+        { "name": "Buffalo (acı)" },
+        { "name": "Ballı hardal" },
+        { "name": "Garlic parmesan kekik" },
+        { "name": "Sweetchilly" },
+        { "name": "İsli barbekü" }
+      ]
+    },
+    {
+      "id": "tatlilar",
+      "name": "Tatlılar",
+      "icon": "special",
+      "products": [{ "name": "Magnolia" }, { "name": "Cake" }]
+    },
+    {
+      "id": "kahveler",
+      "name": "Kahveler",
+      "icon": "coffee",
+      "products": [
+        { "name": "Americano" },
+        { "name": "Latte" },
+        { "name": "Filtre kahve" },
+        { "name": "Ice latte" },
+        { "name": "Ice americano" },
+        { "name": "Caramel latte" }
+      ]
+    }
+  ]
+}

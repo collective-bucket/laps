@@ -48,144 +48,15 @@
     </script>
   </head>
   <body class="menu">
-    <main>
-      <header class="mast">
-        <a class="mark" href="/">
-          <img src="/assets/logo.png" alt="LAPS!" width="2000" height="957" />
-        </a>
-        <p class="tagline">Burger · Sandviç · Coffee</p>
-        <h1 class="menu-title"><span>Menü</span></h1>
-      </header>
-      <div class="board">
-        <div class="col">
-          <section>
-            <h2>Burgerler</h2>
-            <article class="item">
-              <h3>Laps Burger</h3>
-              <p>
-                İki adet kaburga burger, karamelize soğan, turşu, marul ve
-                cheddar sos.
-              </p>
-            </article>
-            <article class="item">
-              <h3>Teksas Burger</h3>
-              <p>
-                Füme et, hamburger köftesi, domates, turşu, jalapone, marul.
-              </p>
-            </article>
-            <article class="item">
-              <h3>Klasik Burger</h3>
-              <p>Köfte, mor soğan, turşu, domates.</p>
-            </article>
-            <article class="item">
-              <h3>Chessburger</h3>
-              <p>Köfte, turşu, domates, karamelize soğan.</p>
-            </article>
-            <article class="item">
-              <h3>Tavuk Burger</h3>
-              <p>Özel paneli tavuk but, Laps sos, marul, turşu.</p>
-              <p class="note">(Hindistan cevizi içerir)</p>
-            </article>
-            <article class="item">
-              <h3>Öğrenci Burger</h3>
-              <p>Köfte, domates, marul, sos, crispy patates.</p>
-            </article>
-          </section>
-          <section>
-            <h2>Gurme tost</h2>
-            <article class="item">
-              <h3>Sucuk füme et chedar kaşar domates</h3>
-            </article>
-            <article class="item">
-              <h3>3 peynirli pestolu</h3>
-            </article>
-            <article class="item">
-              <h3>Karışık tost (kaşar domates sucuk)</h3>
-            </article>
-            <article class="item">
-              <h3>Kaşarlı tost</h3>
-            </article>
-          </section>
-          <section>
-            <h2>Wings (kanat)</h2>
-            <article class="item">
-              <h3>Buffalo (acı)</h3>
-            </article>
-            <article class="item">
-              <h3>Ballı hardal</h3>
-            </article>
-            <article class="item">
-              <h3>Garlic parmesan kekik</h3>
-            </article>
-            <article class="item">
-              <h3>Sweetchilly</h3>
-            </article>
-            <article class="item">
-              <h3>İsli barbekü</h3>
-            </article>
-          </section>
-        </div>
-        <div class="col">
-          <section>
-            <h2>Sandviçler</h2>
-            <article class="item">
-              <h3>İkili tavuklu bun</h3>
-              <p>Laps ballı hardal, marul, turşu, laps sos.</p>
-            </article>
-            <article class="item">
-              <h3>İkili acılı taco bun</h3>
-              <p>
-                %100 yağsız kıyma, jalapone, Meksika fasulyesi, laps hot sos,
-                ranch, crispy, biber patates.
-              </p>
-            </article>
-            <article class="item">
-              <h3>İkili fesleğenli sweetchilly bun</h3>
-              <p>Fesleğenli bun ekmeği, marul, laps sos.</p>
-            </article>
-            <article class="item">
-              <h3>Sosisli</h3>
-            </article>
-            <article class="item">
-              <h3>Görali</h3>
-            </article>
-            <article class="item">
-              <h3>Patsos</h3>
-            </article>
-          </section>
-          <section>
-            <h2>Tatlılar</h2>
-            <article class="item">
-              <h3>Magnolia</h3>
-            </article>
-            <article class="item">
-              <h3>Cake</h3>
-            </article>
-          </section>
-          <section>
-            <h2>Kahveler</h2>
-            <article class="item">
-              <h3>Americano</h3>
-            </article>
-            <article class="item">
-              <h3>Latte</h3>
-            </article>
-            <article class="item">
-              <h3>Filtre kahve</h3>
-            </article>
-            <article class="item">
-              <h3>Ice latte</h3>
-            </article>
-            <article class="item">
-              <h3>Ice americano</h3>
-            </article>
-            <article class="item">
-              <h3>Caramel latte</h3>
-            </article>
-          </section>
-        </div>
-      </div>
-      <p class="signoff"><span>Good Food · Good Vibes</span></p>
+    <header class="menu-head">
+      <a class="mark" href="/">
+        <img src="/assets/logo.png" alt="LAPS!" width="2000" height="957" />
+      </a>
+      <p class="tagline">Burger · Sandwich · Coffee</p>
+    </header>
+    <nav id="step-nav" class="step-nav" aria-label="Menü gezintisi" hidden></nav>
+    <main id="menu-content">
+      <p class="loading">Menü yükleniyor...</p>
     </main>
     <footer class="site-footer">
       <p>
@@ -210,5 +81,6 @@
       </div>
     </div>
     <script src="/assets/track.js" defer></script>
+    <script src="/assets/menu.js" defer></script>
   </body>
 </html>

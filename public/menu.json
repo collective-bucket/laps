@@ -6,87 +6,119 @@
   },
   "menu": [
     {
+      "id": "menuler",
+      "name": "Laps Menüler",
+      "icon": "combo",
+      "products": [
+        {
+          "name": "Hot Dog Sosisli",
+          "description": "Sosis turşu kıtır patates karamelize soğan ballı hardal Cheddar sos ve patates soğan halkası kutu kola"
+        }
+      ]
+    },
+    {
+      "id": "buns",
+      "name": "Buns",
+      "icon": "sandwich",
+      "products": [
+        {
+          "name": "Taco Bun",
+          "description": "2 adet taco bun, dana kıyma, Meksika fasulyesi, jalapeno biber turşusu, renkli biberler, crispy patates, özel acılı bun ekmeği, laps sos"
+        },
+        {
+          "name": "2'li Çıtır Tavuklu Bun",
+          "description": "Bun ekmeğine; özel paneli tavuk, marul, ballı hardal, fesleğen, sweet chili sos, Laps sos"
+        }
+      ]
+    },
+    {
       "id": "burgerler",
       "name": "Burgerler",
       "icon": "burger",
       "products": [
         {
+          "name": "Smoked Grill Burger",
+          "description": "Brioche ekmeği üzerine 100 gr lezzetli burger köftesi yerleştirilerek kırmızı soğan domates turşu ve acı jalapeno biberi ile zenginleştirilir. Taze marul ve özel sos eşliğinde sunulur. Yanında çıtır çıtır patates servis edilir."
+        },
+        {
           "name": "Laps Burger",
-          "description": "İki adet kaburga burger, karamelize soğan, turşu, marul ve cheddar sos."
+          "description": "Double kaburga köftesi, füme et, karamelize soğan, cheddar sos, göbek marul, turşu, Laps sos. Patates kızartması ile"
         },
         {
-          "name": "Teksas Burger",
-          "description": "Füme et, hamburger köftesi, domates, turşu, jalapone, marul."
+          "name": "Kızılcık Burger",
+          "description": "Yumuşak kaburga eti üzerine Laps peynir kreması kızılcık sosu ve sweet chili sos ile hazırlanan lezzetli burger Trüflü mayonez ve taze malzemelerle sunulur"
         },
         {
-          "name": "Klasik Burger",
-          "description": "Köfte, mor soğan, turşu, domates."
+          "name": "Çıtır Tavuk Burger",
+          "description": "Panelenmiş çıtır tavuk, marul, domates, salatalık turşusu, cheddar peyniri sosu, özel soslar. Patates kızartması ile",
+          "note": "Alerjen bilgisi: Hindistan cevizi içerir"
         },
         {
-          "name": "Chessburger",
-          "description": "Köfte, turşu, domates, karamelize soğan."
+          "name": "Smash Burger",
+          "description": "Kaburga köftesi (120 g), füme et, özel laps creamy sos, cheddar peyniri, turşu, karamelize soğan, ballı hardal"
         },
         {
-          "name": "Tavuk Burger",
-          "description": "Özel paneli tavuk but, Laps sos, marul, turşu.",
-          "note": "Hindistan cevizi içerir"
-        },
-        {
-          "name": "Öğrenci Burger",
-          "description": "Köfte, domates, marul, sos, crispy patates."
+          "name": "Sloppy Joe",
+          "description": "Buharlanmış ekmek arasına; dana kıyma, Sicilya domates sosu, jalapeno, turşu, karamelize soğan, cheddar peyniri"
         }
       ]
     },
     {
-      "id": "sandvicler",
-      "name": "Sandviçler",
-      "icon": "sandwich",
-      "products": [
-        {
-          "name": "İkili tavuklu bun",
-          "description": "Laps ballı hardal, marul, turşu, laps sos."
-        },
-        {
-          "name": "İkili acılı taco bun",
-          "description": "%100 yağsız kıyma, jalapone, Meksika fasulyesi, laps hot sos, ranch, crispy, biber patates."
-        },
-        {
-          "name": "İkili fesleğenli sweetchilly bun",
-          "description": "Fesleğenli bun ekmeği, marul, laps sos."
-        },
-        { "name": "Sosisli" },
-        { "name": "Görali" },
-        { "name": "Patsos" }
-      ]
-    },
-    {
-      "id": "gurme-tost",
-      "name": "Gurme tost",
-      "icon": "toast",
-      "products": [
-        { "name": "Sucuk füme et chedar kaşar domates" },
-        { "name": "3 peynirli pestolu" },
-        { "name": "Karışık tost (kaşar domates sucuk)" },
-        { "name": "Kaşarlı tost" }
-      ]
-    },
-    {
       "id": "wings",
-      "name": "Wings (kanat)",
+      "name": "Chicken Wings",
       "icon": "wing",
       "products": [
-        { "name": "Buffalo (acı)" },
-        { "name": "Ballı hardal" },
-        { "name": "Garlic parmesan kekik" },
-        { "name": "Sweetchilly" },
-        { "name": "İsli barbekü" }
+        {
+          "name": "Buffalo Wings (6 Adet)",
+          "description": "Acı buffalo soslu tavuk kanat. Patates kızartması ile kereviz sapı"
+        },
+        {
+          "name": "Garlic Parmesan Wings (6 Adet)",
+          "description": "Sarımsaklı parmesan soslu tavuk kanat. Patates kızartması ile"
+        },
+        {
+          "name": "Smoked BBQ Wings (6 Adet)",
+          "description": "İsli barbekü soslu tavuk kanat. Patates kızartması ile"
+        },
+        {
+          "name": "Sweet Chili Wings (6 Adet)",
+          "description": "Sweet chili soslu tavuk kanat. Patates kızartması ile"
+        }
+      ]
+    },
+    {
+      "id": "yan-urunler",
+      "name": "Yan Ürünler",
+      "icon": "fries",
+      "products": [
+        { "name": "Patates Kızartması", "description": "Parmak dilim" },
+        {
+          "name": "Soğan Halkası (4 Adet)",
+          "description": "4 adet olarak servis edilir."
+        }
       ]
     },
     {
       "id": "tatlilar",
       "name": "Tatlılar",
       "icon": "dessert",
-      "products": [{ "name": "Magnolia" }, { "name": "Cake" }]
+      "products": [
+        {
+          "name": "Mini Klasik Ekler (2 Adet)",
+          "description": "2 adet olarak servis edilir."
+        }
+      ]
+    },
+    {
+      "id": "icecekler",
+      "name": "İçecekler",
+      "icon": "drink",
+      "products": [
+        { "name": "Coca-Cola (33 cl)", "description": "Kutu içecek" },
+        { "name": "Coca-Cola Zero Sugar (33 cl)", "description": "Kutu içecek" },
+        { "name": "Ayran (20 cl)", "description": "Küçük boy" },
+        { "name": "Su (50 cl)", "description": "Pet şişe" }
+      ]
     },
     {
       "id": "kahveler",

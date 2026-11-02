@@ -35,9 +35,14 @@ Sayfa kâğıt beyazıdır. Tabela renkleri vurgu olarak kullanılır: yeşil
 ve altı ay durur. Tarayıcı diline göre otomatik geçiş yoktur. Sözlükte Türkçe
 yoktur; Türkçe, HTML’deki kaynak metindir.
 
-Fiyat, çalışma saati ve e-posta uydurulmaz. Basılı menüdeki yazımlar korunur:
-`jalapone`, `chedar`, `sweetchilly`, `Görali`, `Patsos`, `Chessburger`. Tavuk
-burger notu hindistan cevizi içerdiğini söyler.
+Fiyat, çalışma saati ve e-posta uydurulmaz. Menüde fiyat yoktur. Menünün
+kaynağı işletmenin Yemeksepeti ve Trendyol Go hesabıdır; ürün adları ve
+açıklamalar oradaki gibi yazılır. Kahveler platformda yoktur, sitede kalır.
+Çıtır tavuk burger notu hindistan cevizi içerdiğini söyler.
+
+Online sipariş düğmeleri ana sayfa, menü ve iletişimde aynıdır:
+[Yemeksepeti](https://www.yemeksepeti.com/restaurant/rg7c/laps-rg7c) ve
+[Trendyol Go](https://tgoyemek.com/restoranlar/491837).
 
 İşyeri adresi ve telefon sitede yazılı olanlardır.
 Resmi Instagram hesabı `https://www.instagram.com/lapsfethiye`.

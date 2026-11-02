@@ -13,7 +13,13 @@
     wing:
       '<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="14.2" cy="8.2" rx="5.4" ry="3.3" transform="rotate(-38 14.2 8.2)"/><path d="M10.6 11.4 7.2 16.6"/><circle cx="6.2" cy="17.8" r="1.55"/><circle cx="8.7" cy="18.8" r="1.25"/></svg>',
     dessert:
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9.6 18.8 18.6H5.2z"/><path d="M7.6 14.4h8.8"/><circle cx="14.6" cy="6.6" r="1.5"/><path d="M13.8 7.8c-.5.6-1.1.9-1.8 1.1"/></svg>'
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9.6 18.8 18.6H5.2z"/><path d="M7.6 14.4h8.8"/><circle cx="14.6" cy="6.6" r="1.5"/><path d="M13.8 7.8c-.5.6-1.1.9-1.8 1.1"/></svg>',
+    combo:
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5h14l-1.1 11.5H6.1z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/><path d="M9 13.5c1.8 1.3 4.2 1.3 6 0"/></svg>',
+    fries:
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.8 10.5h12.4l-1.7 9.7H7.5z"/><path d="M8.2 10.5 7.4 4.8"/><path d="M10.7 10.5V3.8"/><path d="M13.3 10.5V4.4"/><path d="M15.8 10.5l.9-5.3"/><path d="M9.2 14.6c1.7 1.1 3.9 1.1 5.6 0"/></svg>',
+    drink:
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 8.5h11.2l-1.5 11.7H7.9z"/><path d="M5.6 8.5h12.8"/><path d="M12.6 8.5 14 3.8l2.9-.8"/><path d="M7 13h10"/></svg>'
   };
 
   var state = {

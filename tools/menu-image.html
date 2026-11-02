@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <title>LAPS! menü görseli</title>
+    <style>
+      :root {
+        --ink: #111111;
+        --muted: #6a6a6a;
+        --green: #1c3e25;
+        --cream: #f9e5c0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1350px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      body {
+        position: relative;
+        padding: 64px 64px 0;
+        border: 20px solid var(--cream);
+        color: var(--ink);
+        font-family: "Helvetica Neue", Helvetica, "Liberation Sans", Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      header img {
+        display: block;
+        width: 330px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .tagline {
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 19px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      main {
+        margin-top: 52px;
+        column-count: 2;
+        column-gap: 56px;
+      }
+
+      section {
+        break-inside: avoid;
+        margin: 0 0 34px;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--cream);
+        color: var(--green);
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        margin: 0 0 9px;
+        font-size: 26px;
+        line-height: 1.22;
+      }
+
+      li small {
+        display: block;
+        margin-top: 2px;
+        color: var(--muted);
+        font-size: 17px;
+        font-style: italic;
+      }
+
+      footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 46px;
+        color: var(--green);
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 0.06em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="../public/assets/logo.png" alt="LAPS!" />
+      <p class="tagline">Burger · Sandwich · Coffee</p>
+    </header>
+    <main id="menu"></main>
+    <footer>lapsfethiye.com/menu</footer>
+    <script>
+      (function () {
+        "use strict";
+
+        var lang = new URLSearchParams(location.search).get("lang") || "tr";
+        if (!/^(tr|en|ru)$/.test(lang)) lang = "tr";
+        document.cookie = "laps_lang=" + lang + "; Path=/; SameSite=Lax";
+        document.documentElement.lang = lang;
+
+        function load(src) {
+          return new Promise(function (resolve, reject) {
+            var script = document.createElement("script");
+            script.src = src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+          });
+        }
+
+        function t(key, fallback) {
+          return window.LapsI18n ? LapsI18n.t(key, fallback) : fallback;
+        }
+
+        Promise.all([
+          load("../public/assets/i18n.js"),
+          fetch("../public/menu.json").then(function (r) {
+            return r.json();
+          }),
+        ]).then(function (results) {
+          var data = results[1];
+          var root = document.getElementById("menu");
+          data.menu.forEach(function (category) {
+            var section = document.createElement("section");
+            var heading = document.createElement("h2");
+            heading.textContent = t("cat." + category.id, category.name);
+            section.appendChild(heading);
+            var list = document.createElement("ul");
+            (category.products || []).forEach(function (item) {
+              var li = document.createElement("li");
+              li.textContent = t("item." + item.name, item.name).replace(/ \(/g, "\u00a0(");
+              if (item.note) {
+                var note = document.createElement("small");
+                note.textContent = t("note." + item.name, item.note);
+                li.appendChild(note);
+              }
+              list.appendChild(li);
+            });
+            section.appendChild(list);
+            root.appendChild(section);
+          });
+          document.body.setAttribute("data-ready", "true");
+        });
+      })();
+    </script>
+  </body>
+</html>
